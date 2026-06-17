@@ -1,1 +1,1 @@
-Upload ALL files in this ZIP to the root of the GitHub repo and replace the existing files. This package fixes the layout, logo sizing, and truck background.
+Upload ALL files in this ZIP. This version removes logo.png usage completely, so the massive white-truck logo cannot appear.

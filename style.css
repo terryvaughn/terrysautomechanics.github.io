@@ -5,29 +5,27 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#020202;color:va
 a{color:inherit}
 .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
 
-/* Header */
+/* This version intentionally does NOT use logo.png, so the white-truck logo cannot appear massive. */
 .top-nav{background:#000;border-bottom:1px solid var(--red);position:sticky;top:0;z-index:20}
-.nav-inner{min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo-link{display:flex;align-items:center;line-height:0}
-.nav-logo{width:170px;height:auto;max-height:90px;object-fit:contain;display:block}
+.nav-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.text-logo{text-decoration:none;display:grid;line-height:.85;filter:drop-shadow(0 0 12px rgba(215,25,32,.25))}
+.text-logo span{font-size:2.1rem;font-weight:1000;color:var(--red);font-style:italic;letter-spacing:-.06em}
+.text-logo small{font-size:.86rem;color:#eee;font-weight:900;letter-spacing:.06em}
 .nav-links{display:flex;align-items:center;gap:26px;text-transform:uppercase;font-weight:900;font-size:.85rem}
 .nav-links a{text-decoration:none;white-space:nowrap}
 .nav-links a:hover{color:var(--red)}
 .nav-btn{background:linear-gradient(#f21d25,#a40f15);padding:14px 22px;border-radius:7px;color:#fff!important}
 
-/* Home */
-.home-hero{min-height:520px;display:flex;align-items:center;background:radial-gradient(circle at 72% 42%,rgba(215,25,32,.18),transparent 28%),linear-gradient(135deg,#050505,#101010,#030303);border-bottom:1px solid rgba(215,25,32,.55)}
-.home-hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.home-hero{min-height:500px;display:flex;align-items:center;background:radial-gradient(circle at 72% 42%,rgba(215,25,32,.18),transparent 28%),linear-gradient(135deg,#050505,#101010,#030303);border-bottom:1px solid rgba(215,25,32,.55)}
+.home-hero-inner{max-width:860px}
 .eyebrow{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px}
 .home-hero h1{font-size:clamp(2.25rem,5vw,4.5rem);line-height:.95;text-transform:uppercase;letter-spacing:-.04em;margin:0 0 18px}
 .lead{color:var(--muted);font-size:1.1rem;max-width:650px}
-.home-logo{width:min(100%,420px);justify-self:center;filter:drop-shadow(0 0 18px rgba(215,25,32,.25))}
 .button-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .btn{border:0;border-radius:7px;padding:14px 22px;text-transform:uppercase;font-weight:900;text-decoration:none;display:inline-flex}
 .primary{background:linear-gradient(#f21d25,#a40f15);color:#fff}
 .secondary{background:#161616;border:1px solid #444;color:#fff}
 
-/* Auth hero */
 .auth-hero{position:relative;min-height:330px;overflow:hidden;border-bottom:1px solid rgba(215,25,32,.55);background:#000}
 .truck-bg{position:absolute;inset:0;background:
   linear-gradient(90deg,#000 0%,rgba(0,0,0,.95) 33%,rgba(0,0,0,.28) 58%,rgba(0,0,0,.78) 100%),
@@ -41,7 +39,6 @@ a{color:inherit}
 .auth-title h1{font-size:clamp(2.15rem,4.3vw,4rem);line-height:1.04;margin:0 0 14px;letter-spacing:-.04em}
 .auth-title p{font-size:1.05rem;margin:0;color:#fff;max-width:620px}
 
-/* Cards/forms */
 .card-grid{display:grid;gap:14px;margin-top:28px;margin-bottom:28px}
 .four-card{grid-template-columns:repeat(4,1fr)}
 .three-card,.fee-grid{grid-template-columns:repeat(3,1fr)}
@@ -84,20 +81,20 @@ input[type=checkbox]{width:17px;height:17px;accent-color:var(--red);margin-top:1
 .status{display:none;grid-column:1/-1;margin:0;padding:12px;border:1px solid rgba(215,25,32,.6);border-radius:7px;background:rgba(215,25,32,.15)}
 .status.show{display:block}
 .center{grid-column:1/-1;text-align:center;margin:0}
-
 .bottom-footer{background:#050505;border-top:1px solid var(--red);padding:14px 0}
 .footer-row{display:flex;gap:22px;justify-content:space-between;flex-wrap:wrap;color:#fff;font-size:.9rem}
 
 @media(max-width:980px){
   .nav-inner{height:auto;padding:12px 0;align-items:flex-start;flex-direction:column}
   .nav-links{gap:14px;flex-wrap:wrap}
-  .home-hero-inner,.fee-grid,.two-col,.signature-grid,.contact-panel{grid-template-columns:1fr}
+  .fee-grid,.two-col,.signature-grid,.contact-panel{grid-template-columns:1fr}
   .four-card,.three-card{grid-template-columns:1fr 1fr}
   .grid.four{grid-template-columns:repeat(2,1fr)}
   .truck-bg{opacity:.62;background-position:right center}
 }
 @media(max-width:620px){
-  .nav-logo{width:135px}
+  .text-logo span{font-size:1.6rem}
+  .text-logo small{font-size:.7rem}
   .auth-hero{min-height:360px}
   .auth-hero-inner{min-height:360px}
   .truck-bg{opacity:.42;background-size:auto 78%;background-position:right bottom}
