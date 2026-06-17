@@ -7,71 +7,45 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav">
-      <div class="brand">
-        <span class="logo-mark">TAM</span>
-        <span>Terry's Auto Mechanics LLC</span>
-      </div>
-      <a class="nav-btn" href="authorization.html">Complete Authorization</a>
-    </nav>
-
-    <section class="hero-content">
-      <p class="eyebrow">Mobile Auto Repair • Roadside Diagnostics • Indiana</p>
-      <h1>Reliable automotive repair brought to you.</h1>
-      <p class="hero-text">
-        Terry's Auto Mechanics LLC provides mobile diagnostics, repair authorization,
-        customer documentation, and roadside-capable service with a professional workflow.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="authorization.html">Complete Repair Authorization</a>
-        <a class="btn secondary" href="tel:3175017326">Call (317) 501-7326</a>
-      </div>
-    </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="Terry's Auto Mechanics LLC" class="site-logo" /></a>
+      <nav class="nav">
+        <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#roadside">Roadside</a><a href="#contact">Contact</a><a class="nav-button" href="authorization.html">Authorization Form</a>
+      </nav>
+    </div>
   </header>
-
   <main>
-    <section class="cards">
-      <article class="card">
-        <h2>Diagnostics</h2>
-        <p>Electrical, drivability, no-start, warning light, and general vehicle inspection services.</p>
-      </article>
-      <article class="card">
-        <h2>Mobile Repairs</h2>
-        <p>Professional mobile repair service for customers who need help at home, work, or roadside.</p>
-      </article>
-      <article class="card">
-        <h2>Signed Consent Forms</h2>
-        <p>Customers can complete the repair authorization before work begins.</p>
-      </article>
-    </section>
-
-    <section class="split">
-      <div>
-        <p class="eyebrow">Before service begins</p>
-        <h2>Customer Authorization Required</h2>
-        <p>
-          To protect both the customer and Terry's Auto Mechanics LLC, customers must complete
-          the authorization form before inspection, diagnosis, repair, test drive, or vehicle movement.
-        </p>
+    <section class="hero home-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Auto Repair & Roadside Assistance</p>
+          <h1>Professional. Reliable. On the road for you.</h1>
+          <p class="hero-subtitle">Terry's Auto Mechanics LLC provides professional automotive repair, mobile diagnostics, and emergency roadside service you can count on.</p>
+          <div class="button-row"><a class="btn primary" href="authorization.html">Complete Authorization Form</a><a class="btn secondary" href="tel:3175017326">Call (317) 501-7326</a></div>
+        </div>
+        <div class="hero-card"><img src="logo.png" alt="Terry's Auto Mechanics LLC logo" class="hero-logo" /><p>Honest repairs. Done right.</p></div>
       </div>
-      <a class="btn primary big" href="authorization.html">Go to Authorization Form</a>
     </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <p><strong>Phone:</strong> <a href="tel:3175017326">(317) 501-7326</a></p>
-      <p><strong>Email:</strong> <a href="mailto:terrysautomechanicsllc@gmail.com">terrysautomechanicsllc@gmail.com</a></p>
-      <p><strong>Website:</strong> terryvaughn.github.io/terrysautomechanics.github.io/</p>
+    <section id="services" class="container section">
+      <div class="feature-grid">
+        <article class="feature-card"><div class="icon">🔧</div><h2>Full Service Repair</h2><p>Diagnostics, maintenance, no-start issues, warning lights, and repair support for many makes and models.</p></article>
+        <article class="feature-card"><div class="icon">⚠️</div><h2>Roadside Assistance</h2><p>Fast response for road calls, breakdowns, jump starts, basic service, and vehicle help when safe and practical.</p></article>
+        <article class="feature-card"><div class="icon">💲</div><h2>Fair & Transparent Pricing</h2><p>Clear fee disclosure before service begins so customers understand charges before authorizing work.</p></article>
+        <article class="feature-card"><div class="icon">🛡️</div><h2>Trusted & Local</h2><p>Proudly serving Indianapolis and surrounding areas with reliable service and professional care.</p></article>
+      </div>
     </section>
+    <section class="container authorization-strip"><div><h2>Why Your Authorization Matters</h2><p>Your authorization helps protect both you and our business. It ensures clear communication, sets expectations, and provides legal protection during the repair process.</p></div><a class="btn primary" href="authorization.html">Complete Authorization Form</a></section>
+    <section id="pricing" class="container section">
+      <div class="pricing-grid">
+        <article class="pricing-card" id="roadside"><div class="icon">🛻</div><h2>Roadside Service Fees</h2><ul><li>$75.00 minimum callout fee</li><li>$2.50 per mile travel charge</li><li>Bad weather callouts: $150.00 minimum + $2.50 per mile</li></ul><p class="fine-print">Bad weather includes snow, ice, freezing rain, severe thunderstorms, high winds, flooding, poor visibility, or hazardous conditions.</p></article>
+        <article class="pricing-card"><div class="icon">⏱️</div><h2>Hourly Rates</h2><ul><li>Diagnosis rate: $125.00 per hour</li><li>Repair labor rate: $100.00 per hour</li></ul><p class="fine-print">All rates are subject to change without notice.</p></article>
+        <article class="pricing-card important"><div class="icon">⚠️</div><h2>Important Notice</h2><p>By signing the authorization form, you agree to all labor charges, diagnostic fees, roadside service fees, mileage charges, storage fees, and abandoned vehicle provisions described.</p></article>
+      </div>
+    </section>
+    <section id="contact" class="container contact-card"><div><h2>Terry's Auto Mechanics LLC</h2><p>An Indiana Limited Liability Company</p><p>📞 <a href="tel:3175017326">(317) 501-7326</a></p><p>📧 <a href="mailto:terrysautomechanicsllc@gmail.com">terrysautomechanicsllc@gmail.com</a></p></div><div><h2>Hours</h2><p>Mon - Fri: 8:00 AM - 6:00 PM</p><p>Saturday: By appointment</p><p>Sunday: Closed</p></div><div><h2>Service Area</h2><p>Indianapolis and surrounding areas</p><p>Indiana</p></div></section>
   </main>
-
-  <footer>
-    <p>© <span id="year"></span> Terry's Auto Mechanics LLC. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Terry's Auto Mechanics LLC. All rights reserved.</span><span>Professional. Reliable. On the road for you.</span></div></footer>
+  <script src="app.js"></script>
 </body>
 </html>
