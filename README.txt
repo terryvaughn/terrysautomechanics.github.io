@@ -1,1 +1,1 @@
-Upload/replace ALL files in this ZIP, especially truck-hero.png and style.css. This removes the accidental screenshot-box background.
+Upload authorization.html, style.css, app.js, logo.png, and truck-hero.png to your GitHub repo root.
