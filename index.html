@@ -3,95 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terry's Auto Mechanics</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #1b1b1b 0%, #070707 55%, #000 100%);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-    .card {
-      width: min(980px, 100%);
-      text-align: center;
-      border: 2px solid #b30000;
-      border-radius: 24px;
-      padding: 36px 24px;
-      background: rgba(10, 10, 10, 0.86);
-      box-shadow: 0 0 35px rgba(255, 0, 0, 0.22);
-    }
-    img {
-      width: min(420px, 90%);
-      border-radius: 18px;
-      margin-bottom: 18px;
-    }
-    h1 {
-      margin: 8px 0 6px;
-      font-size: clamp(2.1rem, 6vw, 4.4rem);
-      color: #e00000;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
-    }
-    .tagline {
-      font-size: clamp(1.1rem, 3vw, 1.55rem);
-      color: #d7d7d7;
-      margin-bottom: 28px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 14px;
-      margin: 26px auto;
-      max-width: 760px;
-    }
-    .service {
-      border: 1px solid #7d0000;
-      border-radius: 14px;
-      padding: 16px;
-      background: #111;
-      color: #f2f2f2;
-      font-weight: bold;
-    }
-    .notice {
-      margin-top: 22px;
-      color: #bdbdbd;
-      line-height: 1.5;
-    }
-    footer {
-      margin-top: 26px;
-      color: #777;
-      font-size: 0.95rem;
-    }
-  </style>
+  <title>Terry's Auto Mechanics LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="card">
-    <img src="logo.png" alt="Terry's Auto Mechanics logo" />
-    <h1>Terry's Auto Mechanics</h1>
-    <div class="tagline">Honest Repairs. Done Right.</div>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">
+        <span class="logo-mark">TAM</span>
+        <span>Terry's Auto Mechanics LLC</span>
+      </div>
+      <a class="nav-btn" href="authorization.html">Complete Authorization</a>
+    </nav>
 
-    <section class="services">
-      <div class="service">General Auto Repair</div>
-      <div class="service">Diagnostics</div>
-      <div class="service">Brake Service</div>
-      <div class="service">Maintenance</div>
+    <section class="hero-content">
+      <p class="eyebrow">Mobile Auto Repair • Roadside Diagnostics • Indiana</p>
+      <h1>Reliable automotive repair brought to you.</h1>
+      <p class="hero-text">
+        Terry's Auto Mechanics LLC provides mobile diagnostics, repair authorization,
+        customer documentation, and roadside-capable service with a professional workflow.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="authorization.html">Complete Repair Authorization</a>
+        <a class="btn secondary" href="tel:3175017326">Call (317) 501-7326</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="cards">
+      <article class="card">
+        <h2>Diagnostics</h2>
+        <p>Electrical, drivability, no-start, warning light, and general vehicle inspection services.</p>
+      </article>
+      <article class="card">
+        <h2>Mobile Repairs</h2>
+        <p>Professional mobile repair service for customers who need help at home, work, or roadside.</p>
+      </article>
+      <article class="card">
+        <h2>Signed Consent Forms</h2>
+        <p>Customers can complete the repair authorization before work begins.</p>
+      </article>
     </section>
 
-    <p class="notice">
-      Temporary website currently under construction.<br />
-      More information, contact options, and scheduling will be added soon.
-    </p>
+    <section class="split">
+      <div>
+        <p class="eyebrow">Before service begins</p>
+        <h2>Customer Authorization Required</h2>
+        <p>
+          To protect both the customer and Terry's Auto Mechanics LLC, customers must complete
+          the authorization form before inspection, diagnosis, repair, test drive, or vehicle movement.
+        </p>
+      </div>
+      <a class="btn primary big" href="authorization.html">Go to Authorization Form</a>
+    </section>
 
-    <footer>© 2026 Terry's Auto Mechanics</footer>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> <a href="tel:3175017326">(317) 501-7326</a></p>
+      <p><strong>Email:</strong> <a href="mailto:terrysautomechanicsllc@gmail.com">terrysautomechanicsllc@gmail.com</a></p>
+      <p><strong>Website:</strong> terryvaughn.github.io/terrysautomechanics.github.io/</p>
+    </section>
   </main>
+
+  <footer>
+    <p>© <span id="year"></span> Terry's Auto Mechanics LLC. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

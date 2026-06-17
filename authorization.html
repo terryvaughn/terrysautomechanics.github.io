@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repair Authorization | Terry's Auto Mechanics LLC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <nav class="nav">
+      <a class="brand link-brand" href="index.html">
+        <span class="logo-mark">TAM</span>
+        <span>Terry's Auto Mechanics LLC</span>
+      </a>
+      <a class="nav-btn" href="index.html">Home</a>
+    </nav>
+    <div class="page-title">
+      <p class="eyebrow">Customer Service Authorization, Liability Agreement & Repair Consent</p>
+      <h1>Complete Before Service Begins</h1>
+      <p>This form documents customer authorization for inspection, diagnosis, testing, repair, vehicle movement, and related service activity.</p>
+    </div>
+  </header>
+
+  <main class="form-wrap">
+    <form id="authForm" class="auth-form">
+      <section class="form-section">
+        <h2>Business Information</h2>
+        <div class="business-box">
+          <strong>TERRY’S AUTO MECHANICS</strong><br>
+          An Indiana Limited Liability Company (Terry’s Auto Mechanics LLC)<br><br>
+          📞 (317) 501-7326<br>
+          📧 terrysautomechanicsllc@gmail.com<br>
+          🌐 terryvaughn.github.io/terrysautomechanics.github.io/
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Customer Information</h2>
+        <div class="grid">
+          <label>Full Name <input name="customer_name" required></label>
+          <label>Phone Number <input name="phone" required></label>
+          <label>Email Address <input name="email" type="email"></label>
+          <label>Address <input name="address"></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Vehicle Information</h2>
+        <div class="grid">
+          <label>Year <input name="year"></label>
+          <label>Make <input name="make"></label>
+          <label>Model <input name="model"></label>
+          <label>VIN <input name="vin"></label>
+          <label>License Plate <input name="plate"></label>
+          <label>Mileage <input name="mileage"></label>
+          <label>Color <input name="color"></label>
+          <label>Fuel Level <input name="fuel"></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Requested Service / Customer Concern</h2>
+        <label>Describe the issue, symptoms, requested repair, or customer concern:
+          <textarea name="service_request" rows="6" required></textarea>
+        </label>
+      </section>
+
+      <section class="form-section">
+        <h2>Pre-Existing Damage / Vehicle Condition</h2>
+        <div class="checks">
+          <label><input type="checkbox" name="damage" value="Scratches"> Scratches</label>
+          <label><input type="checkbox" name="damage" value="Dents"> Dents</label>
+          <label><input type="checkbox" name="damage" value="Cracked glass"> Cracked glass</label>
+          <label><input type="checkbox" name="damage" value="Interior damage"> Interior damage</label>
+          <label><input type="checkbox" name="damage" value="Missing trim"> Missing trim</label>
+          <label><input type="checkbox" name="damage" value="Tire damage"> Tire damage</label>
+          <label><input type="checkbox" name="damage" value="Warning lights already on"> Warning lights already on</label>
+          <label><input type="checkbox" name="damage" value="Other"> Other</label>
+        </div>
+        <label>Additional notes:
+          <textarea name="damage_notes" rows="4"></textarea>
+        </label>
+      </section>
+
+      <section class="form-section">
+        <h2>Authorization & Consent</h2>
+        <p class="small-muted">Customer must check each box before submitting.</p>
+        <div class="consent-list">
+          <label><input type="checkbox" required> I authorize Terry’s Auto Mechanics LLC to inspect, diagnose, test, reposition, and perform requested work on the vehicle listed above.</label>
+          <label><input type="checkbox" required> I understand diagnosis is billed at $125/hour unless otherwise agreed in writing.</label>
+          <label><input type="checkbox" required> I understand repair labor is billed at $100/hour unless otherwise agreed in writing.</label>
+          <label><input type="checkbox" required> I understand roadside, travel, diagnostic, inspection, and service call fees may apply whether or not repairs are completed.</label>
+          <label><input type="checkbox" required> I understand payment is due upon completion unless otherwise agreed in writing.</label>
+          <label><input type="checkbox" required> I understand the vehicle may not be released until the invoice is paid in full, where allowed by law.</label>
+          <label><input type="checkbox" required> I authorize Terry’s Auto Mechanics LLC to photograph or video the vehicle condition, parts, repairs, mileage, warning lights, and damage for documentation.</label>
+          <label><input type="checkbox" required> I understand customer-supplied parts should be new and accompanied by receipts, and Terry’s Auto Mechanics LLC may decline to install unsafe or incorrect parts.</label>
+          <label><input type="checkbox" required> I understand Terry’s Auto Mechanics LLC is not responsible for pre-existing damage, unrelated failures, hidden defects, theft, vandalism, weather damage, or issues outside the authorized work.</label>
+          <label><input type="checkbox" required> I certify that I am the owner or authorized representative of the vehicle and have authority to approve this service.</label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Electronic Signature</h2>
+        <label>Typed Legal Name <input name="signature_name" required></label>
+        <p class="small-muted">Sign inside the box using your finger, mouse, or stylus.</p>
+        <canvas id="signaturePad" width="900" height="260"></canvas>
+        <div class="form-actions">
+          <button type="button" class="btn secondary" id="clearSig">Clear Signature</button>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Submit / Save Copy</h2>
+        <p>
+          After submitting, print or save the completed authorization as a PDF and email it to
+          <strong>terrysautomechanicsllc@gmail.com</strong>.
+        </p>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit Authorization</button>
+          <button type="button" class="btn secondary" id="printBtn">Print / Save as PDF</button>
+          <button type="button" class="btn secondary" id="emailBtn">Email Summary</button>
+        </div>
+        <p id="status" class="status"></p>
+      </section>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
