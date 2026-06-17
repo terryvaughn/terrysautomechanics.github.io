@@ -55,7 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
     hasSignature = true;
   }
 
-  function stopDraw() { drawing = false; }
+  function stopDraw() {
+    drawing = false;
+  }
 
   canvas.addEventListener("mousedown", startDraw);
   canvas.addEventListener("mousemove", draw);
@@ -92,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (signatureImage) signatureImage.value = canvas.toDataURL("image/png");
     if (submissionDate) submissionDate.value = new Date().toLocaleString();
-
     showStatus("Submitting authorization...");
   });
 
