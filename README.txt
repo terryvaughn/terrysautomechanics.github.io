@@ -1,20 +1,17 @@
-Terry's Auto Mechanics LLC Website - Final Upload Package
+# Terry's Auto Mechanics LLC Website - Formspree Version
 
-Upload these files into the root/main folder of your GitHub Pages repository:
+Upload these files into your GitHub Pages repository root:
 
-index.html
-authorization.html
-style.css
-app.js
-logo.png
+- index.html
+- authorization.html
+- style.css
+- app.js
+- logo.png
 
-After uploading, commit the changes.
+This version sends form submissions to Formspree endpoint:
+https://formspree.io/f/mqeoodjj
 
-Main website:
-https://terryvaughn.github.io/terrysautomechanics.github.io/
+After uploading, test the form once yourself. Formspree may require you to confirm the first submission in your email/dashboard.
 
-Authorization form:
+Authorization page:
 https://terryvaughn.github.io/terrysautomechanics.github.io/authorization.html
-
-GitHub Pages cannot automatically store completed forms or email PDF copies because it is static hosting.
-This version lets the customer complete the form, sign it, save/print it as PDF, and email the summary.
