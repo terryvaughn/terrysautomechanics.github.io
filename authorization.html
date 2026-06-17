@@ -6,35 +6,92 @@
   <title>Repair Authorization | Terry's Auto Mechanics LLC</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="site-header compact-header">
+<body class="auth-page">
+  <header class="site-header auth-nav">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="logo.png" alt="Terry's Auto Mechanics LLC" class="site-logo"></a>
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Terry's Auto Mechanics LLC" class="site-logo">
+      </a>
+
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="#fees">Fees</a>
-        <a href="#authorization">Agreement</a>
-        <a class="nav-button" href="tel:3175017326">Call Now</a>
+        <a href="index.html#services">Services</a>
+        <a href="#fees">Pricing</a>
+        <a href="#fees">Roadside Assistance</a>
+        <a href="index.html#contact">About</a>
+        <a class="nav-button" href="#authForm">Authorization Form</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="auth-hero">
-      <div class="container auth-title">
-        <img src="logo.png" alt="Terry's Auto Mechanics LLC" class="auth-title-logo">
-        <div>
-          <p class="eyebrow">Customer Service Authorization</p>
-          <h1>Liability Agreement & Repair Consent</h1>
-          <p>Please read carefully and complete this form before service begins.</p>
+  <main class="auth-main">
+    <section class="authorization-hero">
+      <div class="container hero-stage">
+        <div class="hero-text-block">
+          <img src="logo.png" alt="Terry's Auto Mechanics LLC" class="hero-page-logo">
+          <h1>Customer Service Authorization,<br>Liability Agreement & Repair Consent</h1>
+          <p>
+            Please read the information below carefully and complete the form to authorize
+            services to be performed on your vehicle.
+          </p>
+        </div>
+
+        <div class="truck-scene" aria-hidden="true">
+          <div class="moon-glow"></div>
+          <div class="road-glow"></div>
+          <div class="truck-body">
+            <div class="truck-cab">
+              <div class="truck-window"></div>
+              <div class="truck-hood"></div>
+              <div class="truck-light"></div>
+            </div>
+            <div class="truck-bed">
+              <div class="truck-logo-mini">TERRY'S<br><span>AUTO MECHANICS</span></div>
+              <div class="service-box"></div>
+              <div class="service-door d1"></div>
+              <div class="service-door d2"></div>
+              <div class="service-door d3"></div>
+            </div>
+            <div class="wheel w1"></div>
+            <div class="wheel w2"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="fees" class="container fee-banner">
-      <article class="fee-card"><div class="icon">🛻</div><h2>Roadside Fees</h2><ul><li>$75.00 minimum callout fee</li><li>$2.50 per mile</li><li>Bad weather: $150.00 minimum + $2.50 per mile</li></ul><p class="fine-print">Bad weather includes snow, ice, freezing rain, storms, high winds, flooding, poor visibility, or unsafe conditions.</p></article>
-      <article class="fee-card"><div class="icon">🧾</div><h2>Hourly Rates</h2><ul><li>Diagnosis: $125.00 per hour</li><li>Repair labor: $100.00 per hour</li></ul><p class="fine-print">All rates are subject to change without notice.</p></article>
-      <article class="fee-card important"><div class="icon">⚠️</div><h2>Important Notice</h2><p>By signing, you agree to applicable labor, diagnostic, roadside, mileage, storage, and abandoned vehicle provisions.</p></article>
+    <section id="fees" class="container fee-banner auth-fee-banner">
+      <article class="fee-card">
+        <div class="icon">🛻</div>
+        <h2>Roadside Service Fees</h2>
+        <ul>
+          <li>$75.00 minimum callout fee</li>
+          <li>$2.50 per mile travel charge</li>
+          <li>Bad weather callouts: $150.00 minimum + $2.50 per mile</li>
+        </ul>
+        <p class="fine-print">
+          Bad weather includes snow, ice, freezing rain, severe storms, high winds,
+          flooding, poor visibility, or unsafe service conditions.
+        </p>
+      </article>
+
+      <article class="fee-card">
+        <div class="icon">🧾</div>
+        <h2>Hourly Rates</h2>
+        <ul>
+          <li>Diagnosis rate: $125.00 per hour</li>
+          <li>Repair labor rate: $100.00 per hour</li>
+        </ul>
+        <p class="fine-print">All rates are subject to change without notice.</p>
+      </article>
+
+      <article class="fee-card important">
+        <div class="icon">⚠️</div>
+        <h2>Important Notice</h2>
+        <p>
+          By signing this authorization form, you agree to all labor charges, diagnostic fees,
+          roadside service fees, mileage charges, storage fees, and abandoned vehicle provisions.
+        </p>
+      </article>
     </section>
 
     <form id="authForm" class="container auth-form" action="https://formspree.io/f/mqeoodjj" method="POST">
@@ -43,44 +100,53 @@
       <input type="hidden" name="submission_date" id="submissionDate">
       <input type="text" name="_gotcha" style="display:none">
 
-      <section class="form-section">
+      <section class="form-section compact-section">
         <h2><span>1.</span> Customer Information</h2>
         <div class="grid four">
-          <label>Full Name <b>*</b><input name="customer_name" required placeholder="Full name"></label>
+          <label>Full Name <b>*</b><input name="customer_name" required placeholder="Enter your full name"></label>
           <label>Phone Number <b>*</b><input name="phone" required placeholder="(317) 555-1234"></label>
-          <label>Email Address <b>*</b><input name="email" type="email" required placeholder="you@example.com"></label>
-          <label>Address <b>*</b><input name="address" required placeholder="123 Main St, Indianapolis, IN"></label>
+          <label>Email Address <b>*</b><input name="email" type="email" required placeholder="your.email@example.com"></label>
+          <label>Address <b>*</b><input name="address" required placeholder="123 Main St, Indianapolis, IN 46201"></label>
         </div>
       </section>
 
-      <section class="form-section">
+      <section class="form-section compact-section">
         <h2><span>2.</span> Vehicle Information</h2>
-        <div class="grid four">
+        <div class="grid four vehicle-grid">
           <label>Year <b>*</b><input name="year" required placeholder="2020"></label>
           <label>Make <b>*</b><input name="make" required placeholder="Ford"></label>
           <label>Model <b>*</b><input name="model" required placeholder="F-150"></label>
-          <label>VIN <b>*</b><input name="vin" required placeholder="VIN"></label>
-          <label>License Plate<input name="plate" placeholder="Plate"></label>
+          <label>VIN <b>*</b><input name="vin" required placeholder="1FTFW1E5XKFC12345"></label>
+          <label>License Plate<input name="plate" placeholder="ABC123"></label>
           <label>Mileage<input name="mileage" placeholder="85000"></label>
           <label>Color<input name="color" placeholder="Black"></label>
-          <label>Fuel Level<select name="fuel"><option value="">Select level</option><option>Empty</option><option>1/4</option><option>1/2</option><option>3/4</option><option>Full</option></select></label>
+          <label>Fuel Level
+            <select name="fuel">
+              <option value="">Select level</option>
+              <option>Empty</option>
+              <option>1/4</option>
+              <option>1/2</option>
+              <option>3/4</option>
+              <option>Full</option>
+            </select>
+          </label>
         </div>
       </section>
 
-      <section class="form-section">
+      <section class="form-section compact-section">
         <h2><span>3.</span> Service Request</h2>
         <label>Please describe the issue or service you are requesting <b>*</b>
-          <textarea name="service_request" rows="5" required placeholder="Example: Vehicle cranks but will not start."></textarea>
+          <textarea name="service_request" rows="4" required placeholder="Example: Vehicle cranks but won't start. Battery was replaced last month. No dashboard warning lights."></textarea>
         </label>
       </section>
 
       <section class="two-column">
-        <section id="authorization" class="form-section">
+        <section id="authorization" class="form-section compact-section">
           <h2><span>4.</span> Authorization & Agreement</h2>
           <div class="consent-list">
             <label><input type="checkbox" name="consent_inspect_repair" value="Agreed" required> I authorize Terry's Auto Mechanics LLC to inspect, diagnose, test drive, reposition, and perform requested repairs on my vehicle.</label>
-            <label><input type="checkbox" name="consent_diagnostic_rate" value="Agreed" required> I understand diagnosis is billed at $125.00 per hour unless otherwise agreed in writing.</label>
-            <label><input type="checkbox" name="consent_labor_rate" value="Agreed" required> I understand repair labor is billed at $100.00 per hour unless otherwise agreed in writing.</label>
+            <label><input type="checkbox" name="consent_diagnostic_rate" value="Agreed" required> I understand diagnosis is billed at $125.00 per hour.</label>
+            <label><input type="checkbox" name="consent_labor_rate" value="Agreed" required> I understand repair labor is billed at $100.00 per hour.</label>
             <label><input type="checkbox" name="consent_roadside_fees" value="Agreed" required> I understand roadside service fees apply whether repairs are completed or not.</label>
             <label><input type="checkbox" name="consent_callout_mileage" value="Agreed" required> I understand the minimum roadside callout fee is $75.00 and mileage is $2.50 per mile.</label>
             <label><input type="checkbox" name="consent_bad_weather" value="Agreed" required> I understand bad weather roadside calls have a $150.00 minimum fee and $2.50 per mile charge.</label>
@@ -92,8 +158,9 @@
         </section>
 
         <div class="right-stack">
-          <section class="form-section">
+          <section class="form-section compact-section">
             <h2><span>5.</span> Vehicle Condition Disclosure</h2>
+            <p class="fine-print">Please check any existing conditions on the vehicle:</p>
             <div class="checkbox-grid">
               <label><input type="checkbox" name="damage" value="Scratches"> Scratches</label>
               <label><input type="checkbox" name="damage" value="Dents"> Dents</label>
@@ -104,23 +171,35 @@
               <label><input type="checkbox" name="damage" value="Warning Lights On"> Warning Lights On</label>
               <label><input type="checkbox" name="damage" value="Other Damage"> Other Damage</label>
             </div>
-            <label>Additional notes<textarea name="damage_notes" rows="4" placeholder="Describe other damage or conditions."></textarea></label>
+            <label>Additional Notes
+              <textarea name="damage_notes" rows="3" placeholder="Describe any other damage or conditions."></textarea>
+            </label>
           </section>
 
-          <section class="form-section abandoned">
+          <section class="form-section compact-section abandoned">
             <h2><span>6.</span> Abandoned Vehicle Clause</h2>
-            <p>If the vehicle is left in Terry's Auto Mechanics LLC's possession for more than 30 days without contact, payment, pickup, or written arrangement, it may be considered abandoned and subject to storage fees, mechanic's lien procedures, sale, disposal, salvage, or transfer as permitted by Indiana law.</p>
+            <p>
+              If the vehicle is left in Terry's Auto Mechanics LLC's possession for more than 30 days
+              without contact, payment, pickup, or written arrangement, it may be considered abandoned
+              and subject to storage fees, mechanic's lien procedures, sale, disposal, salvage, or
+              transfer as permitted by Indiana law.
+            </p>
             <label><input type="checkbox" name="consent_abandoned_vehicle" value="Agreed" required> I acknowledge and agree to the abandoned vehicle clause.</label>
           </section>
         </div>
       </section>
 
-      <section class="form-section signature-section">
+      <section class="form-section compact-section signature-section">
         <h2><span>7.</span> Signature</h2>
-        <p class="fine-print">By signing below, I acknowledge that I have read, understood, and agree to all terms above.</p>
+        <p class="fine-print">By signing below, I acknowledge that I have read, understood, and agree to all terms and conditions above.</p>
+
         <label>Electronic Signature Pad <b>*</b></label>
         <canvas id="signaturePad" width="900" height="260"></canvas>
-        <div class="signature-controls"><button type="button" class="small-button" id="clearSig">Clear Signature</button></div>
+
+        <div class="signature-controls">
+          <button type="button" class="small-button" id="clearSig">Clear</button>
+        </div>
+
         <div class="grid two">
           <label>Your Typed Legal Name <b>*</b><input name="signature_name" required placeholder="Type your legal name"></label>
           <label>Date & Time<input name="date_time" id="dateTime" readonly></label>
@@ -128,15 +207,23 @@
       </section>
 
       <section class="submit-section">
-        <button type="submit" class="btn primary submit-btn">Submit Authorization</button>
-        <button type="button" class="btn secondary" id="printBtn">Print / Save as PDF</button>
+        <button type="submit" class="btn primary submit-btn">Submit Form</button>
+        <button type="button" class="btn secondary" id="printBtn">Print / Save PDF</button>
         <p id="status" class="status"></p>
-        <p class="fine-print center">This form will automatically email Terry's Auto Mechanics LLC and store a copy in Formspree.</p>
+        <p class="fine-print center">This form automatically emails Terry's Auto Mechanics LLC and stores a copy in Formspree.</p>
       </section>
     </form>
   </main>
 
-  <footer class="footer skinny-footer"><div class="container contact-row"><span>📞 (317) 501-7326</span><span>📧 terrysautomechanicsllc@gmail.com</span><span>📍 Indianapolis, IN</span></div></footer>
+  <footer class="footer skinny-footer">
+    <div class="container contact-row">
+      <span>📞 (317) 501-7326</span>
+      <span>📧 terrysautomechanicsllc@gmail.com</span>
+      <span>📍 Indianapolis, IN</span>
+      <span>🌐 terryvaughn.github.io/terrysautomechanics.github.io</span>
+    </div>
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
